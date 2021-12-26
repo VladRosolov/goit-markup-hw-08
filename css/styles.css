@@ -12,6 +12,29 @@
 body { font-family: 'Roboto', sans-serif; 
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    display: block;
+}
+
 
 .list {
     list-style: none;
@@ -20,7 +43,37 @@ body { font-family: 'Roboto', sans-serif;
 .link {
     text-decoration: none;
 }
+
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+    /* outline: 2px solid red; */
+}
+
+
+
 /* --------------------------------------------HEADER------------------------------------------ */
+.header {
+    padding-top: 24px;
+    padding-bottom: 25px;
+    border: 1px solid #ECECEC
+}
+
+.header-list {
+    display: flex;
+} 
+
+.header-container {
+    display: flex;
+    align-items: center;
+
+} 
+
+.header-connect {
+    margin-left: auto;
+}
 .header-logo {
     font-family: Raleway;
     font-style: normal;
@@ -29,6 +82,11 @@ body { font-family: 'Roboto', sans-serif;
     line-height: 1.19;
     letter-spacing: 0.03em;
     color: var(--first-text-color);
+    margin-right: 93px;
+}
+
+.header-item:not(:last-child) {
+    margin-right: 50px;
 }
 
 .web-color {
@@ -70,12 +128,21 @@ body { font-family: 'Roboto', sans-serif;
     color: var(--third-text-color);    
 }
 
+.header-mail {
+    margin-right: 50px;
+}
+
+
 /* ------------------------------------------HERO SECTION------------------------------------------ */
 .hero-section {
     background-color: var(--second-background-color);
 
 }
 
+.hero-container {
+    padding-top: 200px;
+
+}
 .hero-title {
     font-weight: 900;
     font-size: 44px;
@@ -84,11 +151,14 @@ body { font-family: 'Roboto', sans-serif;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--second-text-color);
+    margin: 30px auto;
+    width: 696px;
+    height: 120px;
+
 }
 
 .hero-btn-item {
-    font-family: inherit;
-    font-style: normal;
+
     font-weight: bold;
     font-size: 16px;
     line-height: 1.875;
@@ -98,16 +168,22 @@ body { font-family: 'Roboto', sans-serif;
     letter-spacing: 0.06em;    
     color:var(--second-text-color);   
     background: var(--highlight-color);
-    cursor: pointer;    
+    cursor: pointer; 
+    margin: 0 auto;  
+    
 }
 
 
 .hero-btn {
-    display: flex;	
-    justify-content: center;    
+    padding-bottom: 200px;   
 }
 
 /* -----------------------------------DESCRIPTION SECTION-------------------------------- */
+
+
+.description-item:not(:last-child) {
+    margin-right: 30px;
+}
 
 .description-title {
     font-weight: bold;
@@ -116,15 +192,28 @@ body { font-family: 'Roboto', sans-serif;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--first-text-color);
+    margin-bottom: 10px;
 
 }
 
-.description-item {
+.description-text {
     font-weight: normal;
     font-size: 14px;
     line-height: 1.71;  
     letter-spacing: 0.03em;
     color: var(--third-text-color);
+    width: 270px;
+
+}
+
+.description {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.description-list {
+    display: flex;
+
 }
 
 /* -----------------------------------------ABOUT SECTION-------------------------------------- */
@@ -136,11 +225,29 @@ body { font-family: 'Roboto', sans-serif;
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--first-text-color);
+    margin-bottom: 50px;  
+}
+
+.about-list {
+    display: flex;
+    padding-bottom: 94px;
+    margin-left: -30px;
+}
+
+.about-list-item {
+    width: calc(100% / 3 - 30px);
+    margin-left: 30px;
 }
 
 /* --------------------------------------COMMAND SECTION--------------------------------------- */
 .command {
     background: var(--third-background-color);
+    padding-top: 94px;
+}
+
+.command-list {
+    display: flex;
+
 }
 
 .command-title {
@@ -150,7 +257,21 @@ body { font-family: 'Roboto', sans-serif;
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--first-text-color);
+    margin-bottom: 50px;
 }
+
+.command-item {
+    margin-right: 30px;
+    margin-bottom: 94px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.command-item:last-child {
+    margin-right: 0;
+}
+
 .command-item-title {
     font-weight: 500;
     font-size: 16px;
@@ -158,6 +279,8 @@ body { font-family: 'Roboto', sans-serif;
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--first-text-color);
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 
 .command-item-text {
@@ -167,13 +290,17 @@ body { font-family: 'Roboto', sans-serif;
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--third-text-color);
+    padding-bottom: 30px;
 }
+
 
 /* -----------------------------------------FOOTER--------------------------------------------- */
 
 
 .footer {
     background: var(--second-background-color);
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 .footer-logo {
@@ -182,9 +309,11 @@ body { font-family: 'Roboto', sans-serif;
     line-height: 1.19;
     letter-spacing: 0.03em;
     color: var(--second-text-color);
-
 }
 
+.footer-item {
+    margin-top: 20px;
+}
 .footer-address {
     font-family: inherit;
     font-style: normal;
@@ -204,16 +333,38 @@ body { font-family: 'Roboto', sans-serif;
     letter-spacing: 0.03em;    
     color: rgba(255, 255, 255, 0.6);
 }
+.footer-address:hover,
+.footer-address:focus,
 .footer-mail:hover,
 .footer-mail:focus,
 .footer-tel:hover,
 .footer-tel:focus { 
-    color: var(--second-text-color);
+color: var(--highlight-color);
 }
+
+.footer-list-item:not(:last-child) {
+    margin-bottom: 9px;
+}
+
+
+
+
 
 
 /* ------------------------------------------------------------------------------------------------ */
 /*------------------------------------------------ PORTFOLIO----------------------------------------*/
+
+.filters {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+
+.filters-list {
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: center;
+}
 
 
 .btn-title {
@@ -222,11 +373,19 @@ body { font-family: 'Roboto', sans-serif;
     background: var(--third-background-color);
     font-weight: 500;
     font-size: 16px;
-    line-height: 1,625;
+    line-height: 1.62;
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--first-text-color);
-    cursor: pointer
+    cursor: pointer;
+    padding: 6px 22px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    
+}
+
+.btn-item:not(:last-child) {
+    margin-right: 8px;
 }
 
 .btn-title:hover,
@@ -234,6 +393,25 @@ body { font-family: 'Roboto', sans-serif;
     background: var(--highlight-color);
     color: var(--second-text-color);
 } 
+
+.portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.portfolio-description {
+    margin-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 24px;
+}
+
+.portfolio-list .portfolio-title {
+    width: calc((100% - 60) / 3);
+    margin-right: 30px;
+    margin-bottom: 30px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+}
 
 
 .portfolio-item {
@@ -250,7 +428,16 @@ body { font-family: 'Roboto', sans-serif;
     line-height: 30px;
     letter-spacing: 0.03em;
     color:var(--third-text-color);
+    margin-top: 4px;
+}
 
+
+.portfolio-list .portfolio-title:nth-child(3n) {
+    margin-right: 0;
+}
+
+.portfolio-list .portfolio-title:nth-last-child(-n + 3) {
+    margin-bottom: 0;
 }
 
 .current-btn {
