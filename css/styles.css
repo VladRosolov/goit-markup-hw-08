@@ -136,13 +136,10 @@ img {
 /* ------------------------------------------HERO SECTION------------------------------------------ */
 .hero-section {
     background-color: var(--second-background-color);
-
-}
-
-.hero-container {
     padding-top: 200px;
-
+    padding-bottom: 200px;
 }
+
 .hero-title {
     font-weight: 900;
     font-size: 44px;
@@ -169,14 +166,13 @@ img {
     color:var(--second-text-color);   
     background: var(--highlight-color);
     cursor: pointer; 
-    margin: 0 auto;  
-    
+    margin: 0 auto; 
+    padding: 10px 32px; 
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 
-.hero-btn {
-    padding-bottom: 200px;   
-}
 
 /* -----------------------------------DESCRIPTION SECTION-------------------------------- */
 
@@ -196,6 +192,62 @@ img {
 
 }
 
+.description-item:nth-child(1)::before {
+    content: "";
+    display: block;
+    width: 270px;
+    height: 120px;    
+    background-image: url(../images/Group.svg);
+    background-size: height="70" width="70";
+    background-repeat: no-repeat;
+    background-color: #F5F4FA;
+    background-position: center;
+    margin-bottom: 30px;
+    border-radius: 4px; 
+}
+
+.description-item:nth-child(2)::before {
+    content: "";
+    display: block;
+    width: 270px;
+    height: 120px;    
+    background-image: url(../images//clock\ 1.svg);
+    background-size: height="70" width="70";
+    background-repeat: no-repeat;
+    background-color: #F5F4FA;
+    background-position: center;
+    margin-bottom: 30px;
+    border-radius: 4px;  
+}
+
+.description-item:nth-child(3)::before {
+    content: "";
+    display: block;
+    width: 270px;
+    height: 120px;    
+    background-image: url(../images/diagram\ 1.svg);
+    background-size: height="70" width="70";
+    background-repeat: no-repeat;
+    background-color: #F5F4FA;
+    background-position: center;
+    margin-bottom: 30px;
+    border-radius: 4px; 
+}
+
+.description-item:nth-child(4)::before {
+    content: "";
+    display: block;
+    width: 270px;
+    height: 120px;    
+    background-image: url(../images/astronaut\ 1.svg);
+    background-size: height="70" width="70";
+    background-repeat: no-repeat;
+    background-color: #F5F4FA;
+    background-position: center;
+    margin-bottom: 30px;
+    border-radius: 4px; 
+}
+
 .description-text {
     font-weight: normal;
     font-size: 14px;
@@ -203,7 +255,6 @@ img {
     letter-spacing: 0.03em;
     color: var(--third-text-color);
     width: 270px;
-
 }
 
 .description {
@@ -213,10 +264,13 @@ img {
 
 .description-list {
     display: flex;
-
 }
 
 /* -----------------------------------------ABOUT SECTION-------------------------------------- */
+
+.about {
+    padding-bottom: 94px;
+}
 
 .about-title {
     font-weight: bold;
@@ -229,25 +283,26 @@ img {
 }
 
 .about-list {
-    display: flex;
-    padding-bottom: 94px;
-    margin-left: -30px;
+    display: flex;     
 }
 
-.about-list-item {
-    width: calc(100% / 3 - 30px);
-    margin-left: 30px;
+img {
+    width:100%; 
+    height: auto;  
 }
+
+.about-list-item:not(:last-child)
+{ margin-right: 30px; }
 
 /* --------------------------------------COMMAND SECTION--------------------------------------- */
 .command {
     background: var(--third-background-color);
     padding-top: 94px;
+    padding-bottom: 94px;
 }
 
 .command-list {
     display: flex;
-
 }
 
 .command-title {
@@ -262,7 +317,6 @@ img {
 
 .command-item {
     margin-right: 30px;
-    margin-bottom: 94px;
     background: #FFFFFF;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
@@ -304,16 +358,15 @@ img {
 }
 
 .footer-logo {
+    display: flex;
     font-weight: bold;
     font-size: 26px;
     line-height: 1.19;
     letter-spacing: 0.03em;
     color: var(--second-text-color);
+    margin-bottom: 20px;
 }
 
-.footer-item {
-    margin-top: 20px;
-}
 .footer-address {
     font-family: inherit;
     font-style: normal;
@@ -321,7 +374,7 @@ img {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
-    color: var(--second-text-color);
+    color: var(--second-text-color);   
 }
 
 .footer-mail, .footer-tel {
@@ -343,7 +396,7 @@ color: var(--highlight-color);
 }
 
 .footer-list-item:not(:last-child) {
-    margin-bottom: 9px;
+    margin-bottom: 9px;    
 }
 
 
@@ -382,6 +435,11 @@ color: var(--highlight-color);
     border: 1px solid transparent;
     border-radius: 4px;
     
+}
+
+.content-card {
+    text-decoration: none;
+    display: block;
 }
 
 .btn-item:not(:last-child) {
