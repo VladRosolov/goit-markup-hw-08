@@ -56,7 +56,7 @@
         <section class="hero hero-bg">
             <div class="container">
                 <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-                    <button class="hero-btn-item" type="button">
+                    <button class="hero-btn-item" type="button" data-modal-open>
                     Заказать услугу</button>
             </div>
         </section>
@@ -89,19 +89,28 @@
                 <h2 class="about-title">Чем мы занимаемся</h2>
                     <ul class="list about-list">
                         <li class="about-list-item">
-                            <img src="./images/webstudio-img-1.jpg" alt="Вёрстка веб-страниц" 
-                            width="370"
-                            height="294">
-                        </li>
+                            <div class="about-image">
+                                <img src="./images/webstudio-img-1.jpg" alt="Десктопные приложения" width="370">                            
+                                <div class="about-overlay">
+                                    <p class="about-overlay-text">Десктопные приложения</p>
+                                </div>
+                            </div>
+                        </li>                       
                         <li class="about-list-item">
-                            <img src="./images/webstudio-img-2.jpg" alt="Разработка пользовательского интерфейса" 
-                            width="370"
-                            height="294">
-                        </li>
+                            <div class="about-image">
+                                <img src="./images/webstudio-img-2.jpg" alt="Мобильные приложения" width="370">                            
+                                <div class="about-overlay">
+                                    <p class="about-overlay-text">Мобильные приложения</p>
+                                </div>
+                            </div>
+                        </li>                        
                         <li class="about-list-item">
-                            <img src="./images/webstudio-img-3.jpg" alt="Внимание к деталям" 
-                            width="370"
-                            height="294">
+                            <div class="about-image">
+                                <img src="./images/webstudio-img-3.jpg" alt="Дизайнерские решения" width="370">                            
+                                <div class="about-overlay">
+                                    <p class="about-overlay-text">Дизайнерские решения</p>
+                                </div>
+                            </div>
                         </li>
                     </ul>
             </div>
@@ -369,7 +378,17 @@
                 </div>
             </div>
         </div>
-
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button type="button" class="modal-close" data-modal-close>
+                <svg class="close-icon">
+                    <use href="./images/icons.svg#close-modal"></use>
+                </svg>
+            </button>
+            <!-- <p class="modal-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim molestiae debitis illum expedita dicta a velit totam unde excepturi assumenda eius officia rerum delectus quo nihil repellat iure, rem recusandae.</p> -->
+        </div>
+    </div>
+    <script src="./js/modal.js"></script>
 </body>
 </html>
