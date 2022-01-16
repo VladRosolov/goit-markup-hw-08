@@ -461,6 +461,9 @@ img {
 }
 
 .about-overlay-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-weight: bold;
     font-size: 14px;
     line-height: 1.14;
@@ -748,7 +751,7 @@ color: var(--highlight-color);
     padding: 6px 22px;
     border: 1px solid transparent;
     border-radius: 4px;
-    transition: color var(--transition), background-color var(--transition);      
+    transition: color var(--transition), background-color var(--transition), box-shadow var(--transition);      
 }
 
 .content-card {
