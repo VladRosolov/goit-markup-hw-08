@@ -186,7 +186,7 @@ img {
 }
 
 .input-wrap {
-    /* margin-top: 4px; */
+    margin-top: 4px;
     position: relative;
 }
 
@@ -281,8 +281,8 @@ background-repeat: no-repeat;
 background-size: cover;
 }
 
-.form-checkbox {
-    margin-top: 20px;
+.form-comment {
+    margin-bottom: 20px;
 }
 
 .modal-btn-send {
