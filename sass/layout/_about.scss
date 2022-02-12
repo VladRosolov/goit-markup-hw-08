@@ -1,6 +1,11 @@
 
 .about {
-    padding-bottom: 94px;
+    display: none;
+    
+    @include desk {
+        display:flex;
+        margin-bottom: 94px;
+    }
 }
 
 .about__title {

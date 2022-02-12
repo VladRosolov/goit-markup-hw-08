@@ -1,9 +1,44 @@
 .description-list {
-    display: flex;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media screen and (min-width:768px) {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px;
+        }
+    @media screen and (min-width:1200px) {
+        display: flex;
+        flex-wrap: nowrap;
+        margin: 0px;
+        padding: 0;
+        }
 }
 
+.description-list__item {
+    width: 100%;
+    
+    @media screen and (min-width:768px) {
+        width: calc((100% - 2 * 30px ) / 2);
+        margin: 15px;
+    }
+
+    @media screen and (min-width:1200px) {
+        margin: 0px;
+        &:not(:last-child) {
+                margin-right: 30px;
+        }
+    }
+}
+
+
+
 .description-list__item:not(:last-child) {
-    margin-right: 30px;
+    margin-bottom: 30px;
+
+    @media screen and (min-width:768px) {
+        margin-bottom: 0px;
+    }
 }
 
 .description-list__title {
@@ -14,13 +49,17 @@
     text-transform: uppercase;
     color: var(--first-text-color);
     margin-bottom: 10px;
+    text-align: center;
 
+    @media screen and (min-width:768px) {
+        text-align: left;
+    }
 }
 
 .description-list__item:nth-child(1)::before {
     content: "";
     display: block;
-    width: 270px;
+    width: 100%;
     height: 120px;    
     background-image: url(../images/Group.svg);
     background-size: height="70" width="70";
@@ -34,7 +73,7 @@
 .description-list__item:nth-child(2)::before {
     content: "";
     display: block;
-    width: 270px;
+    width: 100%;
     height: 120px;    
     background-image: url(../images//clock.svg);
     background-size: height="70" width="70";
@@ -48,7 +87,7 @@
 .description-list__item:nth-child(3)::before {
     content: "";
     display: block;
-    width: 270px;
+    width: 100%;
     height: 120px;    
     background-image: url(../images/diagram.svg);
     background-size: height="70" width="70";
@@ -62,7 +101,7 @@
 .description-list__item:nth-child(4)::before {
     content: "";
     display: block;
-    width: 270px;
+    width: 100%;
     height: 120px;    
     background-image: url(../images/astronaut.svg);
     background-size: height="70" width="70";
@@ -79,11 +118,13 @@
     line-height: 1.71;  
     letter-spacing: 0.03em;
     color: var(--third-text-color);
-    width: 270px;
+    width: 100%;
 }
 
 .description {
+    @media screen and (min-width:1200px) {
     padding-top: 94px;
     padding-bottom: 94px;
+    }
 }
 
