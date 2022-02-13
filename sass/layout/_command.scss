@@ -118,6 +118,10 @@
     justify-content: center; 
 }
 
+.socials__item:not(:last-child) {
+    margin-right: 10px;
+}
+
 .socials__icon {
     width: 20px;
     height: 20px;

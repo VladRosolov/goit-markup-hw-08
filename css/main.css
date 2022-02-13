@@ -959,8 +959,13 @@ body {
   text-transform: uppercase;
   color: var(--second-text-color);
   margin: 0 auto;
-  width: 360px;
-  height: 84px;
+}
+
+@media screen and (min-width: 768px) {
+  .hero__title {
+    width: 360px;
+    height: 84px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1324,6 +1329,10 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.socials__item:not(:last-child) {
+  margin-right: 10px;
 }
 
 .socials__icon {

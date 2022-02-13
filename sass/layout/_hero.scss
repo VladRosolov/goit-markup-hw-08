@@ -66,8 +66,12 @@
     text-transform: uppercase;
     color: var(--second-text-color);
     margin: 0 auto;
-    width: 360px;
-    height: 84px;
+
+    @include tab {
+        width: 360px;
+        height: 84px;
+        }
+    
 
     @include desk {
     font-size: 44px;
